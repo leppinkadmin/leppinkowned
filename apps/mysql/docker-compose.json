@@ -6,13 +6,13 @@
       "image": "mysql:8.4.0",
       "isMain": true,
       "internalPort": 3306,
-      "environment": {
-        "MYSQL_ROOT_PASSWORD": "${MYSQL_ROOT_PASSWORD}",
-        "MYSQL_DATABASE": "${MYSQL_DATABASE}",
-        "MYSQL_USER": "${MYSQL_USER}",
-        "MYSQL_PASSWORD": "${MYSQL_PASSWORD}",
-        "TZ": "${TZ}"
-      },
+      "environment": [
+        { "key": "MYSQL_ROOT_PASSWORD", "value": "${MYSQL_ROOT_PASSWORD}" },
+        { "key": "MYSQL_DATABASE", "value": "${MYSQL_DATABASE}" },
+        { "key": "MYSQL_USER", "value": "${MYSQL_USER}" },
+        { "key": "MYSQL_PASSWORD", "value": "${MYSQL_PASSWORD}" },
+        { "key": "TZ", "value": "${TZ}" }
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data",
