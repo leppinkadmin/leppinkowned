@@ -1,20 +1,19 @@
 {
   "name": "MySQL",
-  "id": "mysql",
+  "min_tipi_version": "4.0.0",
   "available": true,
-  "short_desc": "MySQL database server",
-  "author": "mysql",
   "port": 3306,
-  "categories": ["databases"],
+  "exposable": false,
+  "dynamic_config": true,
+  "id": "mysql",
   "description": "MySQL is a popular open-source relational database with persistent storage.",
   "tipi_version": 1,
   "version": "8.4.0",
-  "source": "https://hub.docker.com/_/mysql",
+  "categories": ["databases"],
+  "short_desc": "MySQL database server",
+  "author": "mysql",
+  "source": "https://github.com/docker-library/mysql",
   "website": "https://www.mysql.com/",
-  "exposable": false,
-  "no_gui": true,
-  "supported_architectures": ["amd64", "arm64"],
-  "dynamic": true,
   "form_fields": [
     {
       "type": "password",
@@ -42,5 +41,9 @@
       "required": false,
       "env_variable": "MYSQL_PASSWORD"
     }
-  ]
+  ],
+  "supported_architectures": ["arm64", "amd64"],
+  "no_gui": true,
+  "created_at": 1767350000000,
+  "updated_at": 1767350000000
 }
