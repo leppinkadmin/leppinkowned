@@ -8,7 +8,7 @@
   "categories": ["databases"],
   "description": "MySQL is a popular open-source relational database with persistent storage.",
   "tipi_version": 1,
-  "version": "8.4",
+  "version": "8.4.0",
   "source": "https://hub.docker.com/_/mysql",
   "website": "https://www.mysql.com/",
   "exposable": false,
