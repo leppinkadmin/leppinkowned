@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 2,
+  "services": [
+    {
+      "name": "mysql",
+      "image": "mysql:8.4",
+      "isMain": true,
+      "internalPort": 3306,
+      "environment": [
+        { "key": "MYSQL_ROOT_PASSWORD", "value": "${MYSQL_ROOT_PASSWORD}" },
+        { "key": "MYSQL_DATABASE", "value": "${MYSQL_DATABASE}" },
+        { "key": "MYSQL_USER", "value": "${MYSQL_USER}" },
+        { "key": "MYSQL_PASSWORD", "value": "${MYSQL_PASSWORD}" },
+        { "key": "TZ", "value": "${TZ}" }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data",
+          "containerPath": "/var/lib/mysql",
+          "readOnly": false
+        }
+      ]
+    }
+  ]
+}

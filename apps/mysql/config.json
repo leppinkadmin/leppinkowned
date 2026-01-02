@@ -1,0 +1,46 @@
+{
+  "name": "MySQL",
+  "id": "mysql",
+  "available": true,
+  "short_desc": "MySQL database server",
+  "author": "mysql",
+  "port": 3306,
+  "categories": ["databases"],
+  "description": "MySQL is a popular open-source relational database with persistent storage.",
+  "tipi_version": 1,
+  "version": "8.4",
+  "source": "https://hub.docker.com/_/mysql",
+  "website": "https://www.mysql.com/",
+  "exposable": false,
+  "no_gui": true,
+  "supported_architectures": ["amd64", "arm64"],
+  "dynamic": true,
+  "form_fields": [
+    {
+      "type": "password",
+      "label": "MySQL root password",
+      "min": 8,
+      "max": 64,
+      "required": true,
+      "env_variable": "MYSQL_ROOT_PASSWORD"
+    },
+    {
+      "type": "text",
+      "label": "Initial database name (optional)",
+      "required": false,
+      "env_variable": "MYSQL_DATABASE"
+    },
+    {
+      "type": "text",
+      "label": "Initial user (optional)",
+      "required": false,
+      "env_variable": "MYSQL_USER"
+    },
+    {
+      "type": "password",
+      "label": "Initial user password (optional)",
+      "required": false,
+      "env_variable": "MYSQL_PASSWORD"
+    }
+  ]
+}
