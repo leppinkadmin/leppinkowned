@@ -5,7 +5,7 @@
   "short_desc": "MySQL database server",
   "author": "mysql",
   "port": 3306,
-  "categories": ["databases"],
+  "categories": ["data"],
   "description": "MySQL is a popular open-source relational database with persistent storage.",
   "tipi_version": 1,
   "version": "8.4.0",
@@ -16,8 +16,8 @@
   "supported_architectures": ["amd64", "arm64"],
   "dynamic": true,
   "min_tipi_version": "4.0.0",
-  "created_at": 1767350000000,
-  "updated_at": 1767350000000,
+  "created_at": 1767312000000,
+  "updated_at": 1767312000000,
   "form_fields": [
     {
       "type": "password",
