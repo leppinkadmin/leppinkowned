@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 2,
+  "services": [
+    {
+      "name": "postgresql",
+      "image": "postgres:18.3",
+      "isMain": true,
+      "internalPort": 5432,
+      "environment": [
+        { "key": "POSTGRES_USER", "value": "${POSTGRES_USER}" },
+        { "key": "POSTGRES_PASSWORD", "value": "${POSTGRES_PASSWORD}" },
+        { "key": "POSTGRES_DB", "value": "${POSTGRES_DB}" },
+        { "key": "TZ", "value": "${TZ}" }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data",
+          "containerPath": "/var/lib/postgresql/data",
+          "readOnly": false
+        }
+      ]
+    }
+  ]
+}

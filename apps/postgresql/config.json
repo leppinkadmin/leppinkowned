@@ -1,0 +1,43 @@
+{
+  "name": "PostgreSQL",
+  "id": "postgresql",
+  "available": true,
+  "short_desc": "PostgreSQL database server",
+  "author": "postgres",
+  "port": 5432,
+  "categories": ["data"],
+  "description": "PostgreSQL is a powerful open-source relational database system.",
+  "tipi_version": 1,
+  "version": "18.3.0",
+  "source": "https://hub.docker.com/_/postgres",
+  "website": "https://www.postgresql.org/",
+  "exposable": false,
+  "no_gui": true,
+  "supported_architectures": ["amd64", "arm64"],
+  "dynamic": true,
+  "min_tipi_version": "4.0.0",
+  "created_at": 1767312000000,
+  "updated_at": 1767312000000,
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "PostgreSQL user",
+      "required": true,
+      "env_variable": "POSTGRES_USER"
+    },
+    {
+      "type": "password",
+      "label": "PostgreSQL password",
+      "min": 8,
+      "max": 64,
+      "required": true,
+      "env_variable": "POSTGRES_PASSWORD"
+    },
+    {
+      "type": "text",
+      "label": "Database name",
+      "required": true,
+      "env_variable": "POSTGRES_DB"
+    }
+  ]
+}
